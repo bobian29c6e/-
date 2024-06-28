@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="table">
+      <view class="table-row">
+        <view class="table-cell">序号</view>
+        <view class="table-cell">姓名</view>
+        <view class="table-cell">性别</view>
+        <view class="table-cell">出生日期</view>
+        <view class="table-cell">课题组</view>
+        <view class="table-cell">本人手机号</view>
+        <view class="table-cell">邮箱</view>
+        <view class="table-cell">直接邀请人</view>
+        <view class="table-cell">院内联系人</view>
+      </view>
+      <block wx:for="{{tableData}}" wx:key="id">
+        <view class="table-row">
+          <view class="table-cell">{{index + 1}}</view>
+          <view class="table-cell">{{item.name}}</view>
+          <view class="table-cell">{{item.gender}}</view>
+          <view class="table-cell">{{item.dob}}</view>
+          <view class="table-cell">{{item.group}}</view>
+          <view class="table-cell">{{item.phone}}</view>
+          <view class="table-cell">{{item.email}}</view>
+          <view class="table-cell">{{item.inviter}}</view>
+          <view class="table-cell">{{item.contact}}</view>
+        </view>
+      </block>
+    </view>
+
+    <button bindtap="exportToExcel">demo</button>
+  </view>

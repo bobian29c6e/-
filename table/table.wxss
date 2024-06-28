@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 14px;
+  overflow-x: auto;  /* 允许水平滚动 */
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #000;
+  max-height: 600px;  /* 设置表格最大高度 */
+  overflow-y: auto;  /* 当内容超出容器时显示滚动条 */
+}
+
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-cell {
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: center;
+  word-wrap: break-word;  /* 如果内容太长，允许换行 */
+  min-width: 100px; /* 设置一个最小宽度，可以根据需要调整 */
+}
+
+/* 首行标题样式 */
+.table-row:first-child .table-cell {
+  font-weight: bold;  /* 字体加粗 */
+  background-color: #f0f0f0;  /* 背景色 */
+}
+
+/* 添加按钮样式 */
+button {
+  margin-top: 20px;  /* 设置按钮距离表格的距离 */
+  padding: 10px 20px;  /* 设置按钮的内边距 */
+  background-color: #4CAF50;  /* 设置按钮的背景颜色 */
+  color: white;  /* 设置按钮的文字颜色 */
+  border: none;  /* 移除按钮的边框 */
+  cursor: pointer;  /* 当鼠标悬停时显示手型光标 */
+}
